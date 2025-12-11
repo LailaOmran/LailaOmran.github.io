@@ -192,7 +192,71 @@ body {
 .timeline-meta { font-size:.85rem; color:var(--muted); margin-bottom:.5rem; }
 .timeline-content ul { padding-left:1.1rem; }
 .timeline-content li { margin-bottom:.3rem; font-size:.93rem; }
+/* =======================================
+    Profile Photo & Hero Alignment STYLES
+    ======================================= */
 
+/* General Photo Styling */
+.profile-photo {
+    /* Set a size for the image in the right column */
+    width: 260px; /* Adjust size here */
+    height: 260px; 
+    
+    /* Make the image a circle */
+    border-radius: 50%; 
+    
+    /* Ensures the image doesn't get distorted and fills the circle */
+    object-fit: cover; 
+    
+    /* Style: Border and shadow */
+    border: 5px solid var(--accent1, #a855f7); 
+    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.2); 
+    transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 8px 30px rgba(168, 85, 247, 0.4);
+}
+
+/* Hero Media Container (The space where the circle is drawn) */
+.hero-media { 
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 1rem; /* Add some padding */
+} 
+
+/* Desktop Layout Fix (Adjusts the two columns and centers photo) */
+@media (min-width: 800px) {
+    .hero-content { 
+        /* Ensure the two-column grid is active and aligned */
+        grid-template-columns: minmax(0, 1.5fr) 1fr; 
+        align-items: center; 
+        gap: 3rem; /* Add gap between text and image */
+    } 
+}
+
+/* Mobile Adjustments (Photo should be smaller and centered above/below text) */
+@media (max-width: 800px) {
+    /* On mobile, the .hero-content stacks automatically, but we center it */
+    .hero-content {
+        justify-items: center;
+        text-align: center;
+    }
+    .hero-eyebrow {
+        text-align: center;
+    }
+    .hero-media {
+        /* Ensure photo shows up on mobile, but is smaller */
+        display: flex;
+        margin-top: 20px;
+    }
+    .profile-photo {
+        width: 180px; 
+        height: 180px; 
+    }
+}
 /* Experience grid / footer */
 .experience-grid { display:grid; grid-template-columns: minmax(0,1fr); gap:1.8rem; margin-top:1.5rem; }
 .experience-heading { font-size:1.05rem; margin-bottom:.7rem; color:#e5e7eb; }
