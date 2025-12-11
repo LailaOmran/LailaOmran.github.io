@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Laila Omran - Game Developer Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Laila Omran — Senior Unity Engineer (7+ yrs). Team lead for mobile, AR/VR, and multiplayer games. Skills: Unity, C#, multiplayer, APIs, Node.js, game systems, PMP-certified. Resume & contact available." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-content">
+      <div class="logo">Laila<span>Omran</span></div>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-content">
+        <div class="hero-left">
+          <p class="hero-eyebrow">Game Dev • Unity • Team Lead • Mobile Games • VR/AR</p>
+          <h1 id="hero-title">Hi, I'm <span class="accent">Laila</span></h1>
+
+          <p class="hero-text">
+            I build immersive games and interactive experiences using Unity, with a focus on clean architecture.
+            I also explore backend development with Node.js and bring a project management mindset as a PMP® certified professional.
+          </p>
+
+          <div class="hero-contact" aria-label="Contact information">
+            <p><strong>Email:</strong> <a href="mailto:lailaahmed18@outlook.com">lailaahmed18@outlook.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+201018050502">+20 101 805 0502</a></p>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#experience">View Experience</a>
+            <a class="btn ghost" href="https://drive.google.com/uc?export=download&id=1jqfMMpvtjcuKtTuJ1KuwEvSBCu5o_Py6" target="_blank" rel="noopener">Download Resume</a>
+            <a class="btn ghost" href="https://github.com/LailaOmran" target="_blank" rel="noopener">GitHub Profile</a>
+          </div>
+        </div>
+
+        <aside class="hero-media" aria-hidden="true"></aside>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">About Me</h2>
+        <p>
+          Senior Unity Engineer (7+ yrs) — leading teams to ship VR, multiplayer, and mobile games; focused on game systems, APIs, and scalable architecture used by government and enterprise clients.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section-alt" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title">Languages &amp; Tools</h2>
+        <div class="pill-grid" role="list">
+          <span class="pill" role="listitem">C#</span>
+          <span class="pill" role="listitem">JavaScript</span>
+          <span class="pill" role="listitem">Unity</span>
+          <span class="pill" role="listitem">VR/AR</span>
+          <span class="pill" role="listitem">Mobile Games</span>
+          <span class="pill" role="listitem">Multiplayer</span>
+          <span class="pill" role="listitem">Game Systems</span>
+          <span class="pill" role="listitem">Game Tools</span>
+          <span class="pill" role="listitem">Optimization</span>
+          <span class="pill" role="listitem">Node.js</span>
+          <span class="pill" role="listitem">REST APIs</span>
+          <span class="pill" role="listitem">Firebase</span>
+          <span class="pill" role="listitem">MongoDB</span>
+          <span class="pill" role="listitem">Git</span>
+          <span class="pill" role="listitem">Agile</span>
+          <span class="pill" role="listitem">Scrum</span>
+          <span class="pill" role="listitem">PMP®</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title">Gameplay &amp; Projects</h2>
+        <p class="section-subtitle">All videos are embedded and playable directly on this site. Click a thumbnail to play.</p>
+
+        <!-- Mobile slider top -->
+        <div class="slider-topbar">
+          <div class="slider-title">Mobile Games — Playlist</div>
+          <div id="mobile-loading" class="slider-loading">Loading videos…</div>
+        </div>
+
+        <div class="video-slider" id="mobile-slider">
+          <div class="slides" id="mobile-slides" aria-live="polite" aria-label="Mobile game videos"></div>
+          <div class="slider-controls">
+            <button class="slider-btn" id="mobile-prev" aria-label="Previous">◀</button>
+            <button class="slider-btn" id="mobile-next" aria-label="Next">▶</button>
+          </div>
+          <div class="slider-dots" id="mobile-dots" role="tablist" aria-label="Mobile video navigation"></div>
+        </div>
+
+        <div style="height:22px;"></div>
+
+        <!-- VR slider top -->
+        <div class="slider-topbar">
+          <div class="slider-title">VR / PC / Kinect — Playlist</div>
+          <div id="vr-loading" class="slider-loading">Loading videos…</div>
+        </div>
+
+        <div class="video-slider" id="vr-slider">
+          <div class="slides" id="vr-slides" aria-live="polite" aria-label="VR game videos"></div>
+          <div class="slider-controls">
+            <button class="slider-btn" id="vr-prev" aria-label="Previous">◀</button>
+            <button class="slider-btn" id="vr-next" aria-label="Next">▶</button>
+          </div>
+          <div class="slider-dots" id="vr-dots" role="tablist" aria-label="VR video navigation"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section section-alt" aria-labelledby="experience-title">
+      <div class="container">
+        <h2 id="experience-title">Experience</h2>
+        <p class="section-subtitle">A quick overview of my journey as a Unity Game Developer.</p>
+
+        <div class="experience-grid">
+          <div>
+            <h3 class="experience-heading">Professional Experience</h3>
+            <div class="timeline">
+              <article class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h2>Team Lead Game Developer</h2>
+                  <p class="timeline-meta">Zinad.IT – Egypt · Sep 2017 – Present</p>
+                  <ul>
+                    <li>Led the development of games across Android, Web, VR, and AR using Unity and JS engines.</li>
+                    <li>Designed gameplay systems, backend REST APIs, and custom dev tools.</li>
+                    <li>Built multiplayer systems with Photon; optimized for performance and latency.</li>
+                    <li>Championed Agile practices — sprint planning, reviews, retrospectives, stakeholder demos.</li>
+                    <li>Mentored developers and coordinated cross-functional delivery.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h2>Co-Founder &amp; Game Developer</h2>
+                  <p class="timeline-meta">WeeGoo Game Studio – Egypt · Sep 2020 – Present</p>
+                  <ul>
+                    <li>Developed and published 9 Android games on Google Play.</li>
+                    <li>Handled marketing, monetization, and publisher relationships.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="experience-heading">Education &amp; Certifications</h3>
+            <div class="timeline">
+              <article class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h2>Bachelor of Computer Science</h2>
+                  <p class="timeline-meta">Akhbar El Yom Academy, Egypt</p>
+                  <ul><li>Graduated with GPA: A+</li></ul>
+                </div>
+              </article>
+
+              <article class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h2>Diploma in Game Development &amp; Design</h2>
+                  <p class="timeline-meta">Information Technology Institute (ITI)</p>
+                  <ul>
+                    <li>Graduated with GPA: A+. Specialized in Unity, VR, and gameplay architecture.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h2>PMP® Certification</h2>
+                  <p class="timeline-meta">Project Management Professional</p>
+                  <ul><li>Applied PMP principles to plan and deliver large-scale game projects.</li></ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="section">
+      <div class="container">
+        <h2>Highlights</h2>
+        <ul class="list">
+          <li>20+ Unity titles shipped for events and activations.</li>
+          <li>Games launched annually at global events such as GITEX.</li>
+          <li>Experience integrating multiplayer systems and backend APIs for live titles.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-alt" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Where to Find Me</h2>
+        <p>You can reach me directly by email, or connect with me on LinkedIn.</p>
+        <div class="contact-links">
+          <a class="btn primary" href="https://www.linkedin.com/in/your-linkedin-here" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="mailto:lailaahmed18@outlook.com">Email Me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Laila Omran · Game Developer</p>
+    </div>
+  </footer>
+
+  <!-- ====== SCRIPTS ====== -->
+  <script>
+  // ========== CONFIG ==========
+  const WORKER_URL = 'https://portfoliovideos.lailahmed-la.workers.dev'; // <- set your worker URL
+  const PLAYLISTS = {
+    mobile: "PLS-j2IQCB243yIVIVGJI0gzz6FnCbWI6B",
+    vr:     "PLao4MForo3ZQfpdYtYTNhiqcjEsvvDWyp"
+  };
+
+  // ========== DOM helper ==========
+  function el(tag, attrs = {}, children = []) {
+    const e = document.createElement(tag);
+    Object.entries(attrs).forEach(([k,v]) => {
+      if (k === 'class') e.className = v;
+      else if (k === 'html') e.innerHTML = v;
+      else e.setAttribute(k, v);
+    });
+    (Array.isArray(children) ? children : [children]).forEach(c => {
+      if (!c) return;
+      typeof c === 'string' ? e.appendChild(document.createTextNode(c)) : e.appendChild(c);
+    });
+    return e;
+  }
+
+  // ========== Fetch playlist from Worker (returns normalized shape) ==========
+  async function fetchPlaylistFromWorker(playlistId) {
+    const url = new URL(WORKER_URL + '/');
+    url.searchParams.set('playlist', playlistId);
+
+    const resp = await fetch(url.toString(), { method: 'GET' });
+    const txt = await resp.text();
+
+    let json;
+    try {
+      json = JSON.parse(txt);
+    } catch (e) {
+      console.error('Worker returned non-JSON:', txt);
+      throw new Error('Worker returned non-JSON. See console network tab for details.');
+    }
+
+    if (!resp.ok) {
+      console.error('Worker error', resp.status, json);
+      throw new Error('Worker error: ' + (json?.error || json?.message || JSON.stringify(json)));
+    }
+
+    // Normalize worker response shape
+    const totalFound = Number(json.totalFound || (Array.isArray(json.items) ? json.items.length : 0));
+    const embeddableCount = Number(json.embeddableCount ?? (Array.isArray(json.items) ? json.items.length : 0));
+    const rawItems = Array.isArray(json.items) ? json.items : [];
+    const rawExcluded = Array.isArray(json.excluded) ? json.excluded : [];
+
+    const videos = rawItems.map(it => ({
+      id: it.id,
+      title: it.title || it.snippet?.title || 'Untitled',
+      desc: it.desc || it.snippet?.description || '',
+      thumb: it.thumb || it.snippet?.thumbnails?.high?.url || it.snippet?.thumbnails?.default?.url || ''
+    }));
+
+    const excluded = rawExcluded.map(it => ({
+      id: it.id,
+      title: it.title || it.snippet?.title || '',
+      reason: it.reason || 'unknown',
+      details: it.details || ''
+    }));
+
+    return { videos, totalFound, embeddableCount, excluded };
+  }
+
+  // ========== Slider factory ==========
+  function createSlider(config) {
+    const slidesWrap = document.getElementById(config.slidesId);
+    const dotsWrap = document.getElementById(config.dotsId);
+    const prevBtn = document.getElementById(config.prevBtnId);
+    const nextBtn = document.getElementById(config.nextBtnId);
+    const loadingLabel = document.getElementById(config.loadingId);
+
+    let items = [];
+    let index = 0;
+    let autoplayTimer = null;
+    const AUTOPLAY_DELAY = 4800;
+
+    function update() {
+      const offset = -index * 100;
+      slidesWrap.style.transform = `translateX(${offset}%)`;
+      Array.from(dotsWrap.children).forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+    function goto(i) { if (!items.length) return; index = (i + items.length) % items.length; update(); }
+    function next() { goto(index + 1); }
+    function prev() { goto(index - 1); }
+
+    function startAutoplay() { stopAutoplay(); autoplayTimer = setInterval(next, AUTOPLAY_DELAY); }
+    function stopAutoplay() { if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; } }
+
+    slidesWrap.addEventListener('mouseenter', stopAutoplay);
+    slidesWrap.addEventListener('mouseleave', startAutoplay);
+
+    prevBtn.addEventListener('click', prev);
+    nextBtn.addEventListener('click', next);
+
+    document.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') prev(); if (e.key === 'ArrowRight') next(); });
+
+    function playVideoInSlide(slideEl, videoId) {
+      if (slideEl.querySelector('iframe')) return;
+      const origin = location.protocol + '//' + location.hostname;
+      const src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?rel=0&modestbranding=1&autoplay=1`;
+      const iframe = document.createElement('iframe');
+      iframe.src = src;
+      iframe.title = slideEl.querySelector('.slide-title')?.textContent || 'Video';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.loading = 'lazy';
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      iframe.style.border = '0';
+      const mediaWrap = slideEl.querySelector('.slide-media');
+      mediaWrap.innerHTML = '';
+      mediaWrap.appendChild(iframe);
+    }
+
+    function renderVideos(videos) {
+      slidesWrap.innerHTML = '';
+      dotsWrap.innerHTML = '';
+      items = videos;
+      if (!items.length) {
+        slidesWrap.appendChild(el('div', { class: 'card' }, ['No videos found.']));
+        if (loadingLabel) loadingLabel.textContent = 'No videos';
+        return;
+      }
+
+      items.forEach((v, i) => {
+        const slide = el('div', { class: 'slide', role: 'group', 'aria-roledescription': 'slide', 'aria-label': `${i+1} of ${items.length}` });
+
+        const mediaWrap = el('div', { class: 'slide-media' });
+        const thumbImg = el('img', { class: 'slide-thumb', src: v.thumb, alt: v.title });
+        const playBtn = el('button', { class: 'play-overlay', type: 'button', 'aria-label': `Play ${v.title}` }, [ el('span', { class: 'play-icon' }, ['▶']) ]);
+        playBtn.addEventListener('click', () => playVideoInSlide(slide, v.id));
+
+        mediaWrap.appendChild(thumbImg);
+        mediaWrap.appendChild(playBtn);
+
+        const info = el('div', { class: 'slide-info' });
+        const titleEl = el('div', { class: 'slide-title' }, [v.title]);
+        info.appendChild(titleEl);
+
+        slide.appendChild(mediaWrap);
+        slide.appendChild(info);
+        slidesWrap.appendChild(slide);
+
+        const dot = el('button', { class: 'dot', 'aria-label': `Go to slide ${i+1}` });
+        dot.addEventListener('click', () => goto(i));
+        dotsWrap.appendChild(dot);
+      });
+
+      index = 0;
+      update();
+      if (loadingLabel) loadingLabel.style.display = 'none';
+      startAutoplay();
+    }
+
+    return { renderVideos, startAutoplay, stopAutoplay, next, prev };
+  }
+
+  // ========== Error UI helper ==========
+  function showLoadError(loadingId, message, details) {
+    const label = document.getElementById(loadingId);
+    if (label) {
+      label.textContent = message;
+      label.style.color = '#f97316';
+    }
+    console.error(message, details);
+  }
+
+  // ========== Init ==========
+  document.addEventListener('DOMContentLoaded', async () => {
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const mobileSlider = createSlider({
+      slidesId: 'mobile-slides',
+      dotsId: 'mobile-dots',
+      prevBtnId: 'mobile-prev',
+      nextBtnId: 'mobile-next',
+      loadingId: 'mobile-loading'
+    });
+
+    const vrSlider = createSlider({
+      slidesId: 'vr-slides',
+      dotsId: 'vr-dots',
+      prevBtnId: 'vr-prev',
+      nextBtnId: 'vr-next',
+      loadingId: 'vr-loading'
+    });
+
+    // MOBILE
+    try {
+      const res = await fetchPlaylistFromWorker(PLAYLISTS.mobile);
+      console.log('mobile worker response', res);
+      if (!res.videos || !res.videos.length) {
+        showLoadError('mobile-loading', 'No embeddable mobile videos found.', res);
+      } else {
+        const label = document.getElementById('mobile-loading');
+        if (label) label.textContent = `${res.videos.length} embeddable / ${res.totalFound || res.videos.length} total`;
+        mobileSlider.renderVideos(res.videos);
+
+        // optional: log excluded for debugging
+        if (res.excluded && res.excluded.length) {
+          console.groupCollapsed(`Mobile excluded (${res.excluded.length})`);
+          res.excluded.forEach(x => console.warn(x.reason, x.id, x.title, x.details));
+          console.groupEnd();
+        }
+      }
+    } catch (err) {
+      showLoadError('mobile-loading', 'Could not load mobile playlist (worker or API issue).', err);
+    }
+
+    // VR
+    try {
+      const res = await fetchPlaylistFromWorker(PLAYLISTS.vr);
+      console.log('vr worker response', res);
+      if (!res.videos || !res.videos.length) {
+        showLoadError('vr-loading', 'No embeddable VR videos found.', res);
+      } else {
+        const label = document.getElementById('vr-loading');
+        if (label) label.textContent = `${res.videos.length} embeddable / ${res.totalFound || res.videos.length} total`;
+        vrSlider.renderVideos(res.videos);
+
+        if (res.excluded && res.excluded.length) {
+          console.groupCollapsed(`VR excluded (${res.excluded.length})`);
+          res.excluded.forEach(x => console.warn(x.reason, x.id, x.title, x.details));
+          console.groupEnd();
+        }
+      }
+    } catch (err) {
+      showLoadError('vr-loading', 'Could not load VR playlist (worker or API issue).', err);
+    }
+  });
+  </script>
+
+  <script>document.documentElement.style.setProperty('--accent1', '#a855f7');</script>
+</body>
+</html>
