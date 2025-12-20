@@ -196,19 +196,23 @@ body {
     Profile Photo & Hero Alignment STYLES
     ======================================= */
 
+/* Hero Media Container (The entire right column) */
+.hero-media { 
+    /* Changed from row to column to stack the image and Mario sprite */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding: 1rem; 
+    gap: 15px; /* Space between the profile photo and Mario */
+} 
+
 /* General Photo Styling */
 .profile-photo {
-    /* Set a size for the image in the right column */
     width: 260px; /* Adjust size here */
     height: 260px; 
-    
-    /* Make the image a circle */
     border-radius: 50%; 
-    
-    /* Ensures the image doesn't get distorted and fills the circle */
     object-fit: cover; 
-    
-    /* Style: Border and shadow */
     border: 5px solid var(--accent1, #a855f7); 
     box-shadow: 0 4px 20px rgba(168, 85, 247, 0.2); 
     transition: all 0.3s ease;
@@ -219,27 +223,38 @@ body {
     box-shadow: 0 8px 30px rgba(168, 85, 247, 0.4);
 }
 
-/* Hero Media Container (The space where the circle is drawn) */
-.hero-media { 
-    display: flex; /* Use flexbox to center content */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    padding: 1rem; /* Add some padding */
-} 
+/* NEW: Super Mario Sprite Styling */
+.mario-container {
+    /* Container to ensure Mario doesn't push the photo around */
+    display: flex;
+    justify-content: center;
+    /* Add padding/margin to position Mario exactly where you want him */
+    padding-top: 5px; 
+}
+
+.mario-sprite {
+    /* Adjust size for the sprite */
+    width: 70px;
+    height: auto;
+    filter: drop-shadow(0 4px 5px rgba(255, 69, 0, 0.4)); /* Optional: Add a subtle retro shadow */
+    transition: transform 0.3s ease;
+}
 
 /* Desktop Layout Fix (Adjusts the two columns and centers photo) */
 @media (min-width: 800px) {
     .hero-content { 
-        /* Ensure the two-column grid is active and aligned */
         grid-template-columns: minmax(0, 1.5fr) 1fr; 
         align-items: center; 
-        gap: 3rem; /* Add gap between text and image */
+        gap: 3rem; 
+    } 
+    /* Ensure the media container doesn't stretch and aligns its contents */
+    .hero-media { 
+        align-items: center; 
     } 
 }
 
-/* Mobile Adjustments (Photo should be smaller and centered above/below text) */
+/* Mobile Adjustments */
 @media (max-width: 800px) {
-    /* On mobile, the .hero-content stacks automatically, but we center it */
     .hero-content {
         justify-items: center;
         text-align: center;
@@ -248,13 +263,15 @@ body {
         text-align: center;
     }
     .hero-media {
-        /* Ensure photo shows up on mobile, but is smaller */
         display: flex;
         margin-top: 20px;
     }
     .profile-photo {
         width: 180px; 
         height: 180px; 
+    }
+    .mario-sprite {
+        width: 50px; /* Smaller sprite on mobile */
     }
 }
 /* Experience grid / footer */
