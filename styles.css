@@ -766,22 +766,35 @@ body::before {
   box-shadow: 0 12px 48px rgba(99, 102, 241, 0.5);
 }
 
+/* Inline Mario sprite next to heading */
+.mario-inline {
+  display: inline-block;
+  width: 60px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 15px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+  animation: marioJump 2s ease-in-out infinite;
+}
+
+.mario-inline:hover {
+  transform: scale(1.2) translateY(-5px);
+  animation: none;
+}
+
+@keyframes marioJump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Remove old mario container styles (not needed anymore) */
 .mario-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
+  display: none;
 }
 
 .mario-sprite {
-  width: 70px;
-  height: auto;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-  transition: transform 0.3s ease;
-}
-
-.mario-sprite:hover {
-  transform: scale(1.15) translateY(-8px);
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
+  display: none;
 }
 
 /* Experience grid */
@@ -843,5 +856,5 @@ button:focus, a:focus {
   .slide-media { height: var(--slide-height-mobile); }
   .play-overlay { padding: 16px 20px; font-size: 20px; }
   .profile-photo { width: 200px; height: 200px; }
-  .mario-sprite { width: 55px; }
+  .mario-inline { width: 45px; margin-left: 10px; }
 }
