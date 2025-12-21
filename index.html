@@ -428,12 +428,10 @@
         mediaWrap.appendChild(thumbImg);
         mediaWrap.appendChild(playBtn);
 
-        const info = el('div', { class: 'slide-info' });
-        const titleEl = el('div', { class: 'slide-title' }, [v.title]);
-        info.appendChild(titleEl);
+       
 
         slide.appendChild(mediaWrap);
-        slide.appendChild(info);
+      
         slidesWrap.appendChild(slide);
 
         const dot = el('button', { class: 'dot', 'aria-label': `Go to slide ${i+1}` });
