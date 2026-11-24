@@ -455,9 +455,20 @@
     let items = [];
     let index = 0;
     let autoplayTimer = null;
+    let videoPlaying = false;
     const AUTOPLAY_DELAY = 4800;
 
+    function pauseOtherVideos() {
+      Array.from(slidesWrap.children).forEach((slideEl, i) => {
+        if (i === index) return;
+        const f = slideEl.querySelector('iframe');
+        if (f && f.contentWindow) f.contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'pauseVideo', args: [] }), '*');
+      });
+      videoPlaying = false;
+    }
+
     function update() {
+      pauseOtherVideos();
       const offset = -index * 100;
       slidesWrap.style.transform = `translateX(${offset}%)`;
       Array.from(dotsWrap.children).forEach((d, i) => d.classList.toggle('active', i === index));
@@ -466,7 +477,7 @@
     function next() { goto(index + 1); }
     function prev() { goto(index - 1); }
 
-    function startAutoplay() { stopAutoplay(); autoplayTimer = setInterval(next, AUTOPLAY_DELAY); }
+    function startAutoplay() { if (videoPlaying) return; stopAutoplay(); autoplayTimer = setInterval(next, AUTOPLAY_DELAY); }
     function stopAutoplay() { if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; } }
 
     slidesWrap.addEventListener('mouseenter', stopAutoplay);
@@ -478,9 +489,11 @@
     document.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') prev(); if (e.key === 'ArrowRight') next(); });
 
     function playVideoInSlide(slideEl, videoId) {
+      videoPlaying = true;
+      stopAutoplay();
       if (slideEl.querySelector('iframe')) return;
       const origin = location.protocol + '//' + location.hostname;
-      const src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?rel=0&modestbranding=1&autoplay=1`;
+      const src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?rel=0&modestbranding=1&autoplay=1&enablejsapi=1`;
       const iframe = document.createElement('iframe');
       iframe.src = src;
       iframe.title = slideEl.querySelector('.slide-title')?.textContent || 'Video';
