@@ -6,13 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Laila Omran — Game Developer & Programmer (7+ yrs). Unity specialist building mobile, VR/AR games. Shipped 19+ titles showcased at GITEX, Saudi gaming events, and US conventions. Expert in C#, gameplay programming, multiplayer systems, custom tools, and performance optimization." />
   <meta name="keywords" content="game developer, game programmer, Unity, C#, mobile games, VR games, AR games, gameplay programming, Unity developer, indie game developer, game systems, custom editor tools, multiplayer, Photon, performance optimization, Android games, iOS games, Meta Quest, game architecture" />
+  <meta name="author" content="Laila Omran" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0b0d1a" />
+  <meta property="og:title" content="Laila Omran - Game Developer & Programmer" />
+  <meta property="og:description" content="Unity game developer with 7+ years and 19+ shipped titles across mobile, VR/AR and web." />
+  <meta property="og:image" content="https://lailaomran.github.io/images/laila-omran-photo.jpg" />
+  <meta property="og:type" content="profile" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" />
+  <link rel="preload" as="image" href="images/laila-omran-photo.webp" type="image/webp" />
   <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Laila Omran",
+    "jobTitle": "Game Developer & Programmer",
+    "email": "mailto:lailaahmed18@outlook.com",
+    "telephone": "+201018050502",
+    "address": { "@type": "PostalAddress", "addressLocality": "Giza", "addressCountry": "EG" },
+    "url": "https://lailaomran.github.io/",
+    "image": "https://lailaomran.github.io/images/laila-omran-photo.jpg",
+    "sameAs": ["https://www.linkedin.com/in/laila-omran-gamedev/", "https://github.com/LailaOmran"],
+    "knowsAbout": ["Unity", "C#", "Gameplay Programming", "Mobile Games", "VR/AR", "Multiplayer", "Performance Optimization"]
+  }
+  </script>
 </head>
 <body>
-  <!-- Header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header (HUD) -->
   <header class="site-header" role="banner">
     <div class="container header-content">
-      <div class="logo">Laila<span>Omran</span></div>
+      <a class="logo" href="#top" aria-label="Laila Omran, back to top">Laila<span>Omran</span></a>
       <nav class="nav" role="navigation" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -20,24 +48,28 @@
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div class="hud" aria-hidden="true">
+        <span class="hud-coins" title="Hidden coins found"><i class="coin-ico"></i>x<b id="coin-count">0</b>/<span id="coin-total">5</span></span>
+      </div>
     </div>
+    <div class="xp-bar" aria-hidden="true"><div class="xp-fill" id="xp-fill"></div></div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="container hero-content">
         <div class="hero-left">
           <p class="hero-eyebrow">Game Developer • Game Programmer • Unity Specialist • Mobile & VR</p>
           <h1 id="hero-title">
             Hi, I'm <span class="accent">Laila Omran</span>
-            <img src="images/mario-running.gif" alt="Super Mario running" class="mario-inline">
+            <img src="images/mario-running.gif" alt="Super Mario running" class="mario-inline" width="60" height="60">
           </h1>
 
           <p class="hero-text">
-            Game Developer with 7+ years building mobile, VR/AR, and web games in Unity. Expert in C# gameplay programming, 
-            multiplayer systems, and performance optimization. Shipped 19+ titles showcased at international events including 
-            GITEX (UAE), Saudi gaming conventions, and US events. I build custom tools, game systems, and architected solutions 
+            Game Developer with 7+ years building mobile, VR/AR, and web games in Unity. Expert in C# gameplay programming,
+            multiplayer systems, and performance optimization. Shipped 19+ titles showcased at international events including
+            GITEX (UAE), Saudi gaming conventions, and US events. I build custom tools, game systems, and architected solutions
             for indie studios with tight budgets.
           </p>
 
@@ -48,154 +80,189 @@
           </div>
 
           <div class="hero-actions">
-            <a class="btn primary" href="#experience">View Experience</a>
+            <a class="btn primary" href="#experience"><span class="btn-blink" aria-hidden="true">▶</span> View Experience</a>
             <a class="btn ghost" href="https://drive.google.com/file/d/1BbslwXsZOUeRoyYMZh9nZI5lI3t3WtvR/view?usp=sharing" target="_blank" rel="noopener">Download Resume</a>
             <a class="btn ghost" href="https://www.linkedin.com/in/laila-omran-gamedev/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
 
-     <aside class="hero-media" aria-hidden="true">
-          <img src="images/laila-omran-photo.jpg" alt="Laila Omran, Game Developer" class="profile-photo">
+        <aside class="hero-media" aria-label="Player card">
+          <div class="player-card">
+            <div class="player-card-top" aria-hidden="true"><span>Player 1</span><span class="lvl">LV 8+</span></div>
+            <button type="button" class="photo-btn" id="photo-btn" aria-label="Laila Omran photo">
+              <picture>
+                <source srcset="images/laila-omran-photo.webp" type="image/webp">
+                <img src="images/laila-omran-photo.jpg" alt="Laila Omran, Game Developer" class="profile-photo" width="640" height="640" fetchpriority="high">
+              </picture>
+            </button>
+            <dl class="stats">
+              <div class="stat"><dt>Years in Unity</dt><dd><span class="bar" style="--v:.2" aria-hidden="true"></span>8+</dd></div>
+            </dl>
+            <p class="stat-joke"><span aria-hidden="true">🦖</span> Only 20% full: in dinosaur years I'm still a hatchling.</p>
+          </div>
         </aside>
       </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="section" aria-labelledby="about-title">
+    <section id="about" class="section" data-level="Level 1" aria-labelledby="about-title">
       <div class="container">
         <h2 id="about-title">About Me</h2>
-        <p>
-          Game Developer and Programmer with 7+ years of Unity experience. I specialize in gameplay programming, building 
-          custom game systems and tools, and shipping production-quality games for mobile, VR/AR, and web platforms. 
-          My work has been showcased at major international gaming events including GITEX (UAE), Saudi gaming conventions, 
-          and US events. I lead small teams, architect modular systems, and deliver within tight indie studio budgets. 
-          PMP-certified with a strong foundation in Agile development and technical leadership.
-        </p>
+        <div class="dialog-box">
+          <p>
+            Game Developer and Programmer with 7+ years of Unity experience. I specialize in gameplay programming, building
+            custom game systems and tools, and shipping production-quality games for mobile, VR/AR, and web platforms.
+            My work has been showcased at major international gaming events including GITEX (UAE), Saudi gaming conventions,
+            and US events. I lead small teams, architect modular systems, and deliver within tight indie studio budgets.
+            PMP-certified with a strong foundation in Agile development and technical leadership.
+          </p>
+        </div>
+        <button type="button" class="coin" data-coin aria-label="Hidden coin" style="top:1.5rem; right:6%"></button>
       </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="section section-alt" aria-labelledby="skills-title">
+    <section id="skills" class="section section-alt" data-level="Level 2" aria-labelledby="skills-title">
       <div class="container">
         <h2 id="skills-title">Technical Skills</h2>
-        <div class="pill-grid" role="list">
-          <!-- Game Programming Core -->
-          <span class="pill" role="listitem">C#</span>
-          <span class="pill" role="listitem">Unity (7+ years)</span>
-          <span class="pill" role="listitem">Gameplay Programming</span>
-          <span class="pill" role="listitem">Game Mechanics</span>
-          <span class="pill" role="listitem">Physics Systems</span>
-          <span class="pill" role="listitem">AI Behavior</span>
-          <span class="pill" role="listitem">Game Architecture</span>
-          
-          <!-- Mobile & VR -->
-          <span class="pill" role="listitem">iOS/Android</span>
-          <span class="pill" role="listitem">Meta Quest</span>
-          <span class="pill" role="listitem">HTC Vive</span>
-          <span class="pill" role="listitem">OpenXR</span>
-          <span class="pill" role="listitem">Kinect</span>
-          <span class="pill" role="listitem">Touch Controls</span>
-          
-          <!-- Optimization -->
-          <span class="pill" role="listitem">Unity Profiler</span>
-          <span class="pill" role="listitem">Memory Management</span>
-          <span class="pill" role="listitem">Draw Call Reduction</span>
-          <span class="pill" role="listitem">URP</span>
-          <span class="pill" role="listitem">Frame Debugging</span>
-          
-          <!-- Backend & Multiplayer -->
-          <span class="pill" role="listitem">Photon PUN2</span>
-          <span class="pill" role="listitem">Nakama</span>
-          <span class="pill" role="listitem">Firebase</span>
-          <span class="pill" role="listitem">REST APIs</span>
-          <span class="pill" role="listitem">Real-time Networking</span>
-          <span class="pill" role="listitem">Node.js</span>
-          
-          <!-- Systems & Tools -->
-          <span class="pill" role="listitem">Custom Editor Tools</span>
-          <span class="pill" role="listitem">Localization Systems</span>
-          <span class="pill" role="listitem">State Machines</span>
-          <span class="pill" role="listitem">Event Systems</span>
-          <span class="pill" role="listitem">Save/Load Architecture</span>
-          <span class="pill" role="listitem">Dialogue Systems</span>
-          <span class="pill" role="listitem">ScriptableObjects</span>
-          
-          <!-- Architecture -->
-          <span class="pill" role="listitem">SOLID Principles</span>
-          <span class="pill" role="listitem">Modular Design</span>
-          <span class="pill" role="listitem">Data-Driven Architecture</span>
-          <span class="pill" role="listitem">OOP</span>
-          <span class="pill" role="listitem">Component-Based Systems</span>
-          
-          <!-- Tools & Pipeline -->
-          <span class="pill" role="listitem">Git</span>
-          <span class="pill" role="listitem">CI/CD</span>
-          <span class="pill" role="listitem">Agile/Scrum</span>
-          <span class="pill" role="listitem">Code Reviews</span>
-          <span class="pill" role="listitem">Technical Documentation</span>
-          <span class="pill" role="listitem">PMP®</span>
+        <div class="inventory">
+          <div class="slot-group">
+            <h3>Game Programming Core</h3>
+            <ul class="pill-grid">
+              <li class="pill">C#</li>
+              <li class="pill">Unity (7+ years)</li>
+              <li class="pill">Gameplay Programming</li>
+              <li class="pill">Game Mechanics</li>
+              <li class="pill">Physics Systems</li>
+              <li class="pill">AI Behavior</li>
+              <li class="pill">Game Architecture</li>
+            </ul>
+          </div>
+          <div class="slot-group">
+            <h3>Mobile &amp; VR</h3>
+            <ul class="pill-grid">
+              <li class="pill">iOS/Android</li>
+              <li class="pill">Meta Quest</li>
+              <li class="pill">HTC Vive</li>
+              <li class="pill">OpenXR</li>
+              <li class="pill">Kinect</li>
+              <li class="pill">Touch Controls</li>
+            </ul>
+          </div>
+          <div class="slot-group">
+            <h3>Optimization</h3>
+            <ul class="pill-grid">
+              <li class="pill">Unity Profiler</li>
+              <li class="pill">Memory Management</li>
+              <li class="pill">Draw Call Reduction</li>
+              <li class="pill">URP</li>
+              <li class="pill">Frame Debugging</li>
+            </ul>
+          </div>
+          <div class="slot-group">
+            <h3>Backend &amp; Multiplayer</h3>
+            <ul class="pill-grid">
+              <li class="pill">Photon PUN2</li>
+              <li class="pill">Nakama</li>
+              <li class="pill">Firebase</li>
+              <li class="pill">REST APIs</li>
+              <li class="pill">Real-time Networking</li>
+              <li class="pill">Node.js</li>
+            </ul>
+          </div>
+          <div class="slot-group">
+            <h3>Systems &amp; Tools</h3>
+            <ul class="pill-grid">
+              <li class="pill">Custom Editor Tools</li>
+              <li class="pill">Localization Systems</li>
+              <li class="pill">State Machines</li>
+              <li class="pill">Event Systems</li>
+              <li class="pill">Save/Load Architecture</li>
+              <li class="pill">Dialogue Systems</li>
+              <li class="pill">ScriptableObjects</li>
+            </ul>
+          </div>
+          <div class="slot-group">
+            <h3>Architecture</h3>
+            <ul class="pill-grid">
+              <li class="pill">SOLID Principles</li>
+              <li class="pill">Modular Design</li>
+              <li class="pill">Data-Driven Architecture</li>
+              <li class="pill">OOP</li>
+              <li class="pill">Component-Based Systems</li>
+            </ul>
+          </div>
+          <div class="slot-group">
+            <h3>Tools &amp; Pipeline</h3>
+            <ul class="pill-grid">
+              <li class="pill">Git</li>
+              <li class="pill">CI/CD</li>
+              <li class="pill">Agile/Scrum</li>
+              <li class="pill">Code Reviews</li>
+              <li class="pill">Technical Documentation</li>
+              <li class="pill">PMP®</li>
+            </ul>
+          </div>
         </div>
+        <button type="button" class="coin" data-coin aria-label="Hidden coin" style="bottom:1rem; left:2%"></button>
       </div>
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="section" aria-labelledby="projects-title">
+    <section id="projects" class="section" data-level="Level 3" aria-labelledby="projects-title">
       <div class="container">
         <h2 id="projects-title">Gameplay &amp; Projects</h2>
         <p class="section-subtitle">
-          19+ shipped titles across mobile, VR/AR, and web platforms. Games showcased at GITEX (UAE), 
+          19+ shipped titles across mobile, VR/AR, and web platforms. Games showcased at GITEX (UAE),
           Saudi gaming conventions, and US events. All videos are playable directly on this site.
         </p>
 
-        <!-- Mobile slider top -->
-        <div class="slider-topbar">
-          <div class="slider-title">Mobile Games (9 Android Titles) — Playlist</div>
-          <div id="mobile-loading" class="slider-loading">Loading videos…</div>
-        </div>
-
-        <div class="video-slider" id="mobile-slider">
-          <div class="slides" id="mobile-slides" aria-live="polite" aria-label="Mobile game videos"></div>
-          <div class="slider-controls">
-            <button class="slider-btn" id="mobile-prev" aria-label="Previous">◀</button>
-            <button class="slider-btn" id="mobile-next" aria-label="Next">▶</button>
+        <div class="arcade">
+          <div class="slider-topbar">
+            <h3 class="slider-title">Mobile Games (9 Android Titles) — Playlist</h3>
+            <div id="mobile-loading" class="slider-loading">Loading videos…</div>
           </div>
-          <div class="slider-dots" id="mobile-dots" role="tablist" aria-label="Mobile video navigation"></div>
-        </div>
-
-        <div style="height:22px;"></div>
-
-        <!-- VR slider top -->
-        <div class="slider-topbar">
-          <div class="slider-title">VR / PC / Kinect (15 Client Projects) — Playlist</div>
-          <div id="vr-loading" class="slider-loading">Loading videos…</div>
-        </div>
-
-        <div class="video-slider" id="vr-slider">
-          <div class="slides" id="vr-slides" aria-live="polite" aria-label="VR game videos"></div>
-          <div class="slider-controls">
-            <button class="slider-btn" id="vr-prev" aria-label="Previous">◀</button>
-            <button class="slider-btn" id="vr-next" aria-label="Next">▶</button>
+          <div class="video-slider" id="mobile-slider">
+            <div class="slides" id="mobile-slides" aria-live="polite" aria-label="Mobile game videos"></div>
+            <div class="slider-controls">
+              <button class="slider-btn" id="mobile-prev" aria-label="Previous">◀</button>
+              <button class="slider-btn" id="mobile-next" aria-label="Next">▶</button>
+            </div>
+            <div class="slider-dots" id="mobile-dots" role="tablist" aria-label="Mobile video navigation"></div>
           </div>
-          <div class="slider-dots" id="vr-dots" role="tablist" aria-label="VR video navigation"></div>
         </div>
 
+        <div class="arcade">
+          <div class="slider-topbar">
+            <h3 class="slider-title">VR / PC / Kinect (15 Client Projects) — Playlist</h3>
+            <div id="vr-loading" class="slider-loading">Loading videos…</div>
+          </div>
+          <div class="video-slider" id="vr-slider">
+            <div class="slides" id="vr-slides" aria-live="polite" aria-label="VR game videos"></div>
+            <div class="slider-controls">
+              <button class="slider-btn" id="vr-prev" aria-label="Previous">◀</button>
+              <button class="slider-btn" id="vr-next" aria-label="Next">▶</button>
+            </div>
+            <div class="slider-dots" id="vr-dots" role="tablist" aria-label="VR video navigation"></div>
+          </div>
+        </div>
+        <button type="button" class="coin" data-coin aria-label="Hidden coin" style="top:2rem; right:1%"></button>
       </div>
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="section section-alt" aria-labelledby="experience-title">
+    <section id="experience" class="section section-alt" data-level="Level 4" aria-labelledby="experience-title">
       <div class="container">
         <h2 id="experience-title">Professional Experience</h2>
         <p class="section-subtitle">Building games for indie studios, enterprise clients, and international showcases.</p>
 
         <div class="experience-grid">
           <div>
-            <h3 class="experience-heading">Work Experience</h3>
+            <h3 class="experience-heading" data-tag="Quest Log">Work Experience</h3>
             <div class="timeline">
-              <article class="timeline-item">
-                <div class="timeline-marker"></div>
+              <article class="timeline-item quest active">
                 <div class="timeline-content">
-                  <h2>Team Lead Game Developer</h2>
+                  <h4>Team Lead Game Developer</h4>
                   <p class="timeline-meta">Zinad.IT – Egypt · Sep 2017 – Present</p>
                   <ul>
                     <li>Developed 15 games for Saudi Arabian clients, showcased annually at international events including GITEX (UAE), Saudi gaming conventions, and US events—demonstrating production-quality standards for public exhibitions</li>
@@ -209,10 +276,9 @@
                 </div>
               </article>
 
-              <article class="timeline-item">
-                <div class="timeline-marker"></div>
+              <article class="timeline-item quest active">
                 <div class="timeline-content">
-                  <h2>Co-Founder &amp; Game Developer</h2>
+                  <h4>Co-Founder &amp; Game Developer</h4>
                   <p class="timeline-meta">WeeGoo Game Studio – Egypt · Sep 2020 – Present</p>
                   <ul>
                     <li>Developed and launched 9+ Android games on Google Play, managing full development cycle from prototyping to live-ops with 2-3 person team and minimal budget</li>
@@ -225,58 +291,47 @@
           </div>
 
           <div>
-            <h3 class="experience-heading">Education &amp; Certifications</h3>
-            <div class="timeline">
-              <article class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                  <h2>PMP® Certification</h2>
-                  <p class="timeline-meta">Project Management Professional (PMI)</p>
-                </div>
+            <h3 class="experience-heading" data-tag="Achievements">Education &amp; Certifications</h3>
+            <div class="achievements">
+              <article class="achievement">
+                <h4>PMP® Certification</h4>
+                <p class="timeline-meta">Project Management Professional (PMI)</p>
               </article>
-
-              <article class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                  <h2>VR Development Nanodegree</h2>
-                  <p class="timeline-meta">Udacity</p>
-                </div>
+              <article class="achievement">
+                <h4>VR Development Nanodegree</h4>
+                <p class="timeline-meta">Udacity</p>
               </article>
-
-              <article class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                  <h2>Diploma in Game Development &amp; Design</h2>
-                  <p class="timeline-meta">Information Technology Institute (ITI) · GPA: A+</p>
-                </div>
+              <article class="achievement">
+                <h4>Diploma in Game Development &amp; Design</h4>
+                <p class="timeline-meta">Information Technology Institute (ITI) · GPA: A+</p>
               </article>
-
-              <article class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                  <h2>B.S. Computer Science</h2>
-                  <p class="timeline-meta">Akhbar El Yom Academy · GPA: A+</p>
-                </div>
+              <article class="achievement">
+                <h4>B.S. Computer Science</h4>
+                <p class="timeline-meta">Akhbar El Yom Academy · GPA: A+</p>
               </article>
             </div>
           </div>
         </div>
+        <button type="button" class="coin" data-coin aria-label="Hidden coin" style="bottom:1.5rem; right:3%"></button>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section" aria-labelledby="contact-title">
+    <section id="contact" class="section" data-level="Final Level" aria-labelledby="contact-title">
       <div class="container">
-        <h2 id="contact-title">Let's Work Together</h2>
-        <p class="section-subtitle">
-          Open to indie studio opportunities, VR/mobile game development, and contract work.
-        </p>
-        <div class="hero-contact" style="font-size:1rem;">
-          <p><strong>Email:</strong> <a href="mailto:lailaahmed18@outlook.com">lailaahmed18@outlook.com</a></p>
-          <p><strong>Phone:</strong> <a href="tel:+201018050502">+20 101 805 0502</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/laila-omran-gamedev/" target="_blank" rel="noopener">linkedin.com/in/laila-omran-gamedev</a></p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/LailaOmran" target="_blank" rel="noopener">github.com/LailaOmran</a></p>
+        <div class="continue-box">
+          <h2 id="contact-title">Let's Work Together</h2>
+          <p class="section-subtitle">
+            Open to indie studio opportunities, VR/mobile game development, and contract work.
+          </p>
+          <div class="hero-contact contact-list">
+            <p><strong>Email:</strong> <a href="mailto:lailaahmed18@outlook.com">lailaahmed18@outlook.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+201018050502">+20 101 805 0502</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/laila-omran-gamedev/" target="_blank" rel="noopener">linkedin.com/in/laila-omran-gamedev</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/LailaOmran" target="_blank" rel="noopener">github.com/LailaOmran</a></p>
+          </div>
         </div>
+        <button type="button" class="coin" data-coin aria-label="Hidden coin" style="top:1rem; left:4%"></button>
       </div>
     </section>
   </main>
@@ -285,8 +340,12 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <p>&copy; <span id="year"></span> Laila Omran. Game Developer &amp; Programmer specializing in Unity, mobile games, and VR/AR experiences.</p>
+      <p class="footer-hint" aria-hidden="true">Thanks for playing · psst… try ↑ ↑ ↓ ↓ ← → ← → B A</p>
     </div>
   </footer>
+
+  <div class="toast-stack" id="toasts" role="status" aria-live="polite"></div>
+  <script src="game.js" defer></script>
 
   <!-- ====== SCRIPTS ====== -->
   <script>
@@ -523,6 +582,5 @@
   });
   </script>
 
-  <script>document.documentElement.style.setProperty('--accent1', '#a855f7');</script>
 </body>
 </html>
