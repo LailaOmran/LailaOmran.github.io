@@ -69,7 +69,7 @@
     document.querySelectorAll('main section[id]').forEach(function (s) { io.observe(s); });
   }
 
-  // Hidden coins
+  // Hidden dino eggs
   var coins = document.querySelectorAll('[data-coin]');
   var countEl = document.getElementById('coin-count');
   var totalEl = document.getElementById('coin-total');
@@ -81,9 +81,9 @@
       c.classList.add('got');
       got++;
       if (countEl) countEl.textContent = got;
-      pop(ev.clientX, ev.clientY, '+100');
-      if (got === coins.length) { achieve('coins', 'Completionist: found every hidden coin'); confetti(); }
-      else if (got === 1) toast('🪙', 'Secret found', 'A hidden coin! ' + (coins.length - 1) + ' more on this page.');
+      pop(ev.clientX, ev.clientY, '🦖 hatched!');
+      if (got === coins.length) { achieve('eggs', 'Jurassic collector: hatched every dino egg'); confetti(); }
+      else if (got === 1) toast('🥚', 'Secret found', 'A dino egg! ' + (coins.length - 1) + ' more hidden on this page.');
     });
   });
 
@@ -110,6 +110,10 @@
       confetti();
     }
   });
+
+  // Tap the header dino: it roars
+  var dino = document.querySelector('.dino-inline');
+  if (dino) dino.addEventListener('click', function (ev) { pop(ev.clientX, ev.clientY, 'RAWR!'); });
 
   // A hello for the devs who open DevTools
   try {
